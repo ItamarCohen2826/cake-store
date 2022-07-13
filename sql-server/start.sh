@@ -1,0 +1,11 @@
+npx postgraphile \
+  -c itamarcohen://cakestore_postgraphile:cakestore_secret@localhost/cakestoredb \
+  --schema cakestore \
+  --append-plugins @graphile-contrib/pg-simplify-inflector,postgraphile-plugin-connection-filter,@graphile/postgis \
+  --watch \
+  --owner-connection chandrasagar.pv:///postgres \
+  --default-role cakestore_anonymous \
+  --jwt-token-identifier cakestore.jwt \
+  --jwt-secret caketstorejwtsecret \
+  --enhance-graphiql \
+  --allow-explain  

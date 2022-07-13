@@ -1,0 +1,19 @@
+{
+  "name": "cakestorebe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@graphile-contrib/pg-simplify-inflector": "^6.1.0",
+    "@graphile/postgis": "^0.1.0",
+    "graphile": "^4.11.0",
+    "graphql": "^14.0.2",
+    "postgraphile": "^4.12.8",
+    "postgraphile-plugin-connection-filter": "^2.2.1"
+  }
+}
