@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "apollo": "node ./apolloclient.js"
+    "proxy": "http://localhost:5000/graphql"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",

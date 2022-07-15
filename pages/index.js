@@ -3,9 +3,10 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 // Importing bootstrap stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Map from './Map/Map';
+// import Map from './Map/Map';
 import client from "../apolloclient";
 import Register, { getServerSideProps } from './server-side';
+import { ApolloProvider } from '@apollo/client';
 
 export default function Home() {
   return (
@@ -25,8 +26,10 @@ export default function Home() {
         <p className={styles.description}>
           We make delicious cakes!
         </p>
-      <Map></Map>
-      <Register />
+      {/* <Map></Map> */}
+      <ApolloProvider client={client}>
+        <Register />
+      </ApolloProvider>
       </main>
     </div>
   )
