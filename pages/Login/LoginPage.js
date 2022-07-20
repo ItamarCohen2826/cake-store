@@ -9,7 +9,7 @@ import { gql, useMutation } from '@apollo/client';
 export default function LoginPage() {
     // const usernameElement = document.getElementById('username');
     // const passwordElement = document.getElementById('password');
-    const Login = gql`
+    const LOGIN_MUTATION = gql`
     mutation Login(
         $username: String!
         $password: String!
@@ -20,7 +20,7 @@ export default function LoginPage() {
       }
       
     `;
-    const [login, { data, loading, error }] = useMutation(Login);
+    const [login, { data, loading, error }] = useMutation(LOGIN_MUTATION);
 
     let input;
     const [username, setUsername] = useState('');
