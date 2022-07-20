@@ -9,4 +9,4 @@ npx postgraphile \
   --jwt-secret caketstorejwtsecret \
   --enhance-graphiql \
   --allow-explain  
-  --headers Access-Control-Allow-Origin: *
+  --cors

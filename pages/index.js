@@ -7,19 +7,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import client from "../apolloclient";
 import Register, { getServerSideProps } from './server-side';
 import { ApolloProvider } from '@apollo/client';
+import LoginPage from './Login/LoginPage';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Cake Store</title>
         <meta name='description' content='Cake Store' />
         <meta name='author' content='Itamar Cohen' />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={`${styles.title} fs-1`}>
+        <h1 className={`${styles.title} text-3xl font-bold`}>
           Cake Store
         </h1>
         <p></p>
@@ -27,8 +28,11 @@ export default function Home() {
           We make delicious cakes!
         </p>
       {/* <Map></Map> */}
-      <ApolloProvider client={client}>
+      {/* <ApolloProvider client={client}>
         <Register />
+      </ApolloProvider> */}
+      <ApolloProvider client={client}>
+        <LoginPage />
       </ApolloProvider>
       </main>
     </div>
