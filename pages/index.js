@@ -8,6 +8,7 @@ import client from "../apolloclient";
 import Register, { getServerSideProps } from './server-side';
 import { ApolloProvider } from '@apollo/client';
 import LoginPage from './Login/LoginPage';
+import RegisterPage from './Register/RegisterUser';
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       </ApolloProvider> */}
       <ApolloProvider client={client}>
         <LoginPage />
+        <RegisterPage />
       </ApolloProvider>
       </main>
     </div>
